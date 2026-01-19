@@ -30,7 +30,10 @@ export default function ProjectCard({
 }: ProjectCardProps) {
   if (isPlaceholder) {
     return (
-      <div className="p-4 rounded-lg border border-white/10 bg-white/5 opacity-50">
+      <div
+        className="p-4 rounded-lg border border-white/10 bg-white/5 opacity-50"
+        aria-label={`${name}: ${description}`}
+      >
         <div className="flex items-center justify-between">
           <div>
             <h3 className="text-white/50 font-medium">{name}</h3>
@@ -46,7 +49,8 @@ export default function ProjectCard({
       href={githubUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className="block p-4 rounded-lg border border-white/10 bg-white/5 hover:bg-white/10 hover:border-white/20 transition-all duration-300 group"
+      className="block p-4 rounded-lg border border-white/10 bg-white/5 hover:bg-white/10 hover:border-white/20 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 group focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent"
+      aria-label={`${name}: ${description}. Opens GitHub repository in new tab.`}
     >
       <div className="flex items-center justify-between">
         <div>
@@ -55,7 +59,10 @@ export default function ProjectCard({
           </h3>
           <p className="text-sm text-gray-400 mt-1">{description}</p>
         </div>
-        <div className="text-gray-500 group-hover:text-white transition-colors">
+        <div
+          className="text-gray-500 group-hover:text-white transition-colors"
+          aria-hidden="true"
+        >
           <GitHubIcon />
         </div>
       </div>
