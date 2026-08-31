@@ -2,6 +2,8 @@
 
 Personal landing page with animated Three.js particle background.
 
+**[jerem.io](https://jerem.io)**
+
 ## Tech Stack
 
 - **React 19** - UI library
@@ -73,4 +75,4 @@ Recommended platforms:
 
 ## License
 
-MIT
+[MIT](LICENSE) © Jérémie Drazic
